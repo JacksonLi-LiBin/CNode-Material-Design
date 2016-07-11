@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yzdsmart.cnode_material_design">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:name="com.yzdsmart.cnode_material_design.app.AppController"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppThemeLight">
+        <activity
+            android:name="com.yzdsmart.cnode_material_design.ui.activity.LaunchActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLaunch">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.yzdsmart.cnode_material_design.ui.activity.MainActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.FitsStatusBar" />
+
+        <activity
+            android:name="com.yzdsmart.cnode_material_design.ui.activity.LoginActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/login"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.FitsStatusBar" />
+
+        <activity
+            android:name="com.yzdsmart.cnode_material_design.ui.activity.QRCodeActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/open_qrcode"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.yzdsmart.cnode_material_design.ui.activity.TopicActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/topic"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.yzdsmart.cnode_material_design.ui.activity.TopicCompatActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/topic"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.yzdsmart.cnode_material_design.ui.activity.CreateTopicActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/new_topic"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <activity
+            android:name="com.yzdsmart.cnode_material_design.ui.activity.MarkdownPreviewActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/markdown_preview"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.yzdsmart.cnode_material_design.ui.activity.ImagePreviewActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/image_preview"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.yzdsmart.cnode_material_design.ui.activity.UserDetailActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/user_detail"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.yzdsmart.cnode_material_design.ui.activity.NotificationActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/notification"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.yzdsmart.cnode_material_design.ui.activity.NotificationCompatActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/notification"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.yzdsmart.cnode_material_design.ui.activity.SettingActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/setting"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.yzdsmart.cnode_material_design.ui.activity.ModifyTopicSignActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/modify_topic_sign"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.yzdsmart.cnode_material_design.ui.activity.AboutActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/about"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppThemeLight.FitsStatusBar" />
+
+        <activity
+            android:name="com.yzdsmart.cnode_material_design.ui.activity.LicenseActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/open_source_license"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.yzdsmart.cnode_material_design.ui.activity.CrashLogActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/app_crash"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.yzdsmart.cnode_material_design.ui.activity.StandardLinkRouterActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="cnodejs.org"
+                    android:pathPrefix="/topic/"
+                    android:scheme="https" />
+            </intent-filter>
+            <intent-filter android:label="@string/app_name">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="cnodejs.org"
+                    android:pathPrefix="/user/"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

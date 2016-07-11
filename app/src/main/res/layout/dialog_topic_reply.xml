@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:background="?attr/widgetBackgroundDark"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_bar_size"
+        android:background="?attr/widgetBackgroundTitle"
+        android:elevation="@dimen/editor_bar_elevation">
+
+        <ImageView
+            android:id="@+id/btn_tool_close"
+            android:layout_width="@dimen/app_bar_size"
+            android:layout_height="@dimen/app_bar_size"
+            android:background="?attr/selectableItemBackground"
+            android:scaleType="center"
+            android:src="@drawable/ic_close_grey600_24dp" />
+
+        <View
+            style="@style/AppWidget.DeepLine.Vertical"
+            android:layout_toEndOf="@+id/btn_tool_close"
+            android:layout_toRightOf="@+id/btn_tool_close" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_toEndOf="@+id/btn_tool_close"
+            android:layout_toLeftOf="@+id/btn_tool_send"
+            android:layout_toRightOf="@+id/btn_tool_close"
+            android:layout_toStartOf="@+id/btn_tool_send"
+            android:scrollbars="none">
+
+            <include layout="@layout/widget_editor_bar" />
+
+        </HorizontalScrollView>
+
+        <View
+            style="@style/AppWidget.DeepLine.Vertical"
+            android:layout_toLeftOf="@+id/btn_tool_send"
+            android:layout_toStartOf="@+id/btn_tool_send" />
+
+        <ImageView
+            android:id="@+id/btn_tool_send"
+            android:layout_width="@dimen/app_bar_size"
+            android:layout_height="@dimen/app_bar_size"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="?attr/selectableItemBackground"
+            android:scaleType="center"
+            android:src="@drawable/ic_send_grey600_24dp" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_target"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#8880bd01"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/tv_target"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="8dp"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            tools:text="回复：16楼" />
+
+        <ImageView
+            android:id="@+id/btn_clear_target"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:adjustViewBounds="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:scaleType="center"
+            android:src="@drawable/ic_close_white_18dp" />
+
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edt_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="start"
+                android:hint="@string/create_topic_content_hint"
+                android:minLines="12"
+                android:padding="16dp"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

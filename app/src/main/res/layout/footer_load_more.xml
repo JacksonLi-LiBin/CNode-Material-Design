@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/widgetBackground"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:id="@+id/icon_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:visibility="gone"
+        app:matProg_barColor="@color/color_accent"
+        app:matProg_barWidth="3dp"
+        app:matProg_progressIndeterminate="true" />
+
+    <TextView
+        android:id="@+id/tv_text"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center"
+        android:text="@string/load_more_endless"
+        android:textColor="?android:attr/textColorSecondary"
+        android:textSize="14sp"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+</LinearLayout>
